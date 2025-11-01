@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Arcade Zone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">🕹️ Arcade Zone</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="main.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="records.html">Scoreboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4">
+        <section id="home" class="page-section">
+            <div class="p-5 text-center text-white rounded-3 mb-5" style="background-color: var(--secondary-color);">
+                <h1 class="fw-bold mb-3">Welcome to Arcade Zone!</h1>
+                <p class="lead mb-4">Fast and fun mini-games to relax and have fun.</p>
+                <a class="btn btn-arcade btn-lg" href="games.html" role="button">Play Now!</a>
+            </div>
+
+            <h2 class="text-center mb-4">Popular Games</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x300/1e90ff/ffffff?text=Color+Match" class="card-img-top" alt="Color Match Game">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Color Match</h5>
+                            <p class="card-text">A simple reaction game: decide if the word matches the color shown.</p>
+                            <a href="games.html" class="btn btn-sm btn-outline-primary">Play</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x300/ff4500/ffffff?text=Number+Guess" class="card-img-top" alt="Guess the Number Game">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Guess the Number</h5>
+                            <p class="card-text">Classic challenge: guess the random number in as few tries as possible.</p>
+                            <a href="games.html" class="btn btn-sm btn-outline-primary">Play</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x300/6a5acd/ffffff?text=Quick+Quiz" class="card-img-top" alt="Quick Quiz Game">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Quick Quiz</h5>
+                            <p class="card-text">Test your knowledge with fun and short quizzes!</p>
+                            <a href="games.html" class="btn btn-sm btn-outline-primary">Play</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 mb-2 mb-md-0">
+                <p class="mb-0 small">&copy; <span id="currentYear"></span> Arcade Zone. Created by cool guys</p>
+            </div>
+            <div class="col-md-6">
+                <a href="mailto:contact@arcadezone.kz" class="text-white me-3 text-decoration-none small">Contact: contact@arcadezone.kz</a>
+                <span class="text-white-50 small">|</span>
+                <span class="text-white ms-3 small">Group: SE-2435</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
