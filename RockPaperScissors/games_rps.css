@@ -1,0 +1,30 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#choice-selected img {
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+    border: 1px solid rgb(60, 60, 60);
+}
+
+#choices {
+    width: 240px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#choices img {
+    width: 80px;
+    height: 80px;
+}

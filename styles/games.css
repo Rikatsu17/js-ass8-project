@@ -1,8 +1,8 @@
 :root {
     --accent-blue: #2BC3FF; 
     --dark-bg: #1a1a1a;
-    --card-bg: rgba(255, 255, 255, 0.05); 
-    --text-color: #e0e0e0;
+    --card-bg: rgba(255, 255, 255, 0.4); 
+    --text-color: #1a1a1a;
     --button-text-dark: #1a1a1a;
 }
 
@@ -11,44 +11,50 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, var(--dark-bg), #0d0d0d); 
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    padding: 40px;
+    text-align: center;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* ───────── HEADER ───────── */
 #header-basic {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.9); 
+    background: rgba(255, 255, 255, 0.4); 
     padding: 15px 30px;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid var(--accent-blue);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-radius: 10px;
 }
+
 .logo-text {
     font-size: 1.8em;
     color: var(--accent-blue) !important;
-    text-shadow: 0 0 5px var(--accent-blue);
+    text-shadow: 0 0 4px rgba(43, 195, 255, 0.4);
 }
+
 .nav-links {
     padding: 8px 12px;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 4px;
     color: var(--text-color); 
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
 }
 .nav-links:hover {
-    color: var(--accent-blue);
-    background-color: rgba(43, 195, 255, 0.1);
+    color: white;
+    background-color: var(--accent-blue);
 }
 .nav-button {
     width: 30px;
@@ -56,13 +62,14 @@ body {
     object-fit: contain;
     margin-left: 10px;
     transition: transform 0.3s;
-    filter: invert(1); 
+    filter: invert(0);
 }
 .nav-button:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 5px var(--accent-blue)) invert(1);
+    filter: drop-shadow(0 0 5px var(--accent-blue));
 }
 
+/* ───────── MAIN CONTENT ───────── */
 #main-basic {
     flex-grow: 1;
     padding: 60px 20px;
@@ -74,42 +81,46 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
+
 .word {
     text-shadow:
-        0 0 10px var(--accent-blue),
-        0 0 20px var(--accent-blue);
+        0 0 5px var(--accent-blue),
+        0 0 10px rgba(43, 195, 255, 0.5);
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 40px;
-    color: white;
+    color: var(--text-color);
 }
 
+/* ───────── SECTIONS ───────── */
 #dom-section, #attr-section, #form-section {
     background-color: var(--card-bg);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(43, 195, 255, 0.3);
+    box-shadow: 0 0 15px rgba(43, 195, 255, 0.2);
     width: 100%;
     max-width: 600px;
-    border: 1px solid rgba(43, 195, 255, 0.4);
+    border: 1px solid rgba(43, 195, 255, 0.3);
     text-align: left;
+    backdrop-filter: blur(5px);
 }
 
 h2 {
     color: var(--accent-blue);
     margin-bottom: 25px;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
     padding-bottom: 10px;
     text-align: center;
 }
 
+/* ───────── LIST ───────── */
 #my-list {
     list-style-type: none;
     padding: 0;
     margin-bottom: 25px;
 }
 #my-list li {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 4px;
@@ -117,12 +128,10 @@ h2 {
     transition: background-color 0.3s;
 }
 #my-list li:hover {
-    background-color: rgba(43, 195, 255, 0.15);
-}
-#dom-section button {
-    margin-right: 10px;
+    background-color: rgba(43, 195, 255, 0.3);
 }
 
+/* ───────── ATTR SECTION ───────── */
 #attr-section {
     text-align: center;
 }
@@ -140,6 +149,7 @@ h2 {
     font-size: 1.1em;
 }
 
+/* ───────── FORM ───────── */
 #form-section form {
     display: grid;
     grid-template-columns: 1fr;
@@ -156,8 +166,8 @@ h2 {
     padding: 10px;
     border: 1px solid rgba(43, 195, 255, 0.5);
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
     width: 100%;
 }
 #form-section input:focus {
@@ -174,6 +184,7 @@ h3 {
     font-weight: bold;
 }
 
+/* ───────── BUTTONS ───────── */
 button {
     padding: 10px 20px;
     font-weight: bold;
@@ -194,20 +205,23 @@ button:active {
     transform: scale(0.95);
 }
 
+/* ───────── FOOTER ───────── */
 #footer-basic {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.4);
     padding: 20px;
     text-align: center;
     font-weight: 600;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
     color: var(--accent-blue);
     border-top: 2px solid var(--accent-blue);
+    border-radius: 10px;
 }
 
+/* ───────── GAME AREA (если есть) ───────── */
 #game-area {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--secondary-color);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--accent-blue);
 }
